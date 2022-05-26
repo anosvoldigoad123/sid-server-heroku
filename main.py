@@ -5,7 +5,7 @@ from os import system
 from os import environ
 app=Flask(__name__)
 Thread(target=system, args=("proxy --hostname=127.0.0.1 --port=8000", )).start()
-ngrok.set_auth_token("YOUR_NGROK_APIKEY")
+ngrok.set_auth_token("29hIZG0nfarmYevtd77rbSVXIac_3L9AtC7GctnomGBg4i8Mz")
 tcp=ngrok.connect(8000, "tcp")
 @app.route("/")
 def index():
