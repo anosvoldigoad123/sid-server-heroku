@@ -6,10 +6,5 @@ Click==7.0
 dnspython==1.16.0
 email-validator==1.0.4
 fastapi==0.65.2
-h11==0.8.1
-httptools==0.0.13
-idna==2.8
-pydantic==1.6.2
-uvicorn==0.11.7
-uvloop==0.12.2
+uvicorn
 heroku3
