@@ -16,6 +16,7 @@ from base64 import b85decode, b64decode
 import random
 import aiohttp
 import asyncio
+import heroku3
 import requests
 import requests_random_user_agent
 import hmac
@@ -80,7 +81,7 @@ def login_custom(email: str, password: str,device:str):
         response = requests.post(f"{api}/g/s/auth/login", headers=headers, data=data)
         if response.status_code == 403:
         	error=json.dumps({"api:statuscode":000,"api:message":"wait ip is changing"})
-                res()
+        	res()
         	return error
         else:
         	return response.json()
