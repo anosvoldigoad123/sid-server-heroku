@@ -25,6 +25,13 @@ import  threading
 from uuid import uuid4
 import aminos
 api="https://service.narvii.com/api/v1"
+key="a336e50d-6876-4ff7-ab29-e9e4c958b73c"
+name="proxypp124"
+def res():
+    heroku_conn = heroku3.from_key(key)
+    botapp= heroku_conn.apps()[name]
+    botapp.restart()
+
 def r():
     s = requests.Session()
     return s.headers['User-Agent']
@@ -73,6 +80,7 @@ def login_custom(email: str, password: str,device:str):
         response = requests.post(f"{api}/g/s/auth/login", headers=headers, data=data)
         if response.status_code == 403:
         	error=json.dumps({"api:statuscode":000,"api:message":"wait ip is changing"})
+                res()
         	return error
         else:
         	return response.json()
@@ -84,9 +92,9 @@ async def get_webpage():
     return "Sid server"
     
 @app.get('/reset')
-async def res():
-    threading.Thread(target=reset,args=[""]).start()
-    return "restart"
+async def ress():
+    res()
+    return "restarted"
 
 
 
