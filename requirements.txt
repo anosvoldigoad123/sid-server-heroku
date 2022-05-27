@@ -1,3 +1,6 @@
-git+https://github.com/abhinavsingh/proxy.py.git@develop
-flask
-pyngrok
+Dick.py
+heroku
+aiohttp
+fastapi
+amino-socket
+uvicorn
