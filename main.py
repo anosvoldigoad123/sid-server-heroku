@@ -24,7 +24,7 @@ import base64
 import  threading
 from uuid import uuid4
 import aminos
-
+api="https://service.narvii.com/api/v1"
 def r():
     s = requests.Session()
     return s.headers['User-Agent']
