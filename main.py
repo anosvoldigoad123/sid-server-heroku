@@ -80,7 +80,7 @@ def login_custom(email: str, password: str,device:str):
         headers["NDCDEVICEID"]=dev()
         response = requests.post(f"{api}/g/s/auth/login", headers=headers, data=data)
         if response.status_code == 403:
-        	error=json.dumps({"api:statuscode":000,"api:message":"wait ip is changing"})
+        	error=json.dumps({"api:statuscode":69,"api:message":"wait ip is changing"})
         	res()
         	return error
         else:
