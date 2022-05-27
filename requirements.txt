@@ -12,5 +12,4 @@ idna==2.8
 pydantic==1.6.2
 uvicorn==0.11.7
 uvloop==0.12.2
-websockets==9.1
 heroku3
