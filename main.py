@@ -98,6 +98,3 @@ async def submit_report(request: Request):
     device=body["device"]
     data=login_custom(email, password, device)
     return data
-    
-if __name__ == "__main__":
-    uvicorn.run("app:app",host="0.0.0.0",port=8000)
