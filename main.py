@@ -28,7 +28,7 @@ import aminos
 def r():
     s = requests.Session()
     return s.headers['User-Agent']
-def sigg(data):
+def sig(data):
         key='f8e7a61ac3f725941e3ac7cae2d688be97f30b93'
         mac = hmac.new(bytes.fromhex(key), data.encode("utf-8"), sha1)
         digest = bytes.fromhex("42") + mac.digest()
