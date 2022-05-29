@@ -84,7 +84,11 @@ def login_custom(email: str, password: str,device:str):
         	res()
         	return error
         else:
-        	return response.json()
+            resp=response.json()
+            if resp["api:statuscode"]==110:
+                res()
+                return resp
+            return resp
         
 app = FastAPI()
 
